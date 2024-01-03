@@ -1,0 +1,32 @@
+[
+  {
+    "PersonId": 1,
+    "PersonName": "Marguerite",
+    "Email": "mwebsdale0@people.com.cn",
+    "DateOfBirth": "1989-08-28",
+    "Gender": "Female",
+    "CountryId": 1,
+    "Address": "4 Parkside Point",
+    "ReceiveNewsLetters": false
+  },
+  {
+    "PersonId": 2,
+    "PersonName": "Ursa",
+    "Email": "ushears1@globo.com",
+    "DateOfBirth": "1990-10-05",
+    "Gender": "Female",
+    "CountryId": 2,
+    "Address": "6 Morningstar Circle",
+    "ReceiveNewsLetters": false
+  },
+  {
+    "PersonId": 3,
+    "PersonName": "Franchot",
+    "Email": "fbowsher2@howstuffworks.com",
+    "DateOfBirth": "1995-02-10",
+    "Gender": "Male",
+    "CountryId": 3,
+    "Address": "73 Heath Avenue",
+    "ReceiveNewsLetters": true
+  }
+]

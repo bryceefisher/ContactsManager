@@ -1,0 +1,94 @@
+@model PersonUpdateRequest
+@{
+    ViewBag.Title = "Edit Person";
+}
+
+<div class="container mt-5 text-center">
+    <div class="pt-3">
+        <h2 class="display-4">Edit Contact</h2>
+    </div>
+</div>
+
+<div class="container col-6 d-flex flex-column">
+    <form asp-controller="Person" asp-action="Edit" method="post">
+        <div class="mb-3 d-flex">
+            <div class="col-3">
+                <label asp-for="PersonName" class="form-label">
+                    <h5>Person Name:</h5>
+                </label>
+            </div>
+            <div class="col-9">
+                <input class="w-100 form-control" asp-for="PersonName" required>
+            </div>
+        </div>
+        <div class="mb-3 d-flex">
+            <div class="col-3">
+                <label asp-for="Email" class="form-label">
+                    <h5>Email:</h5>
+                </label>
+            </div>
+            <div class="col-9">
+                <input class="w-100 form-control" asp-for="Email" required>
+            </div>
+        </div>
+        <div class="mb-3 d-flex">
+            <div class="col-3">
+                <label asp-for="Phone" class="form-label">
+                    <h5>Phone:</h5>
+                </label>
+            </div>
+            <div class="col-9">
+                <input class="w-100 form-control" asp-for="Phone" required>
+            </div>
+        </div>
+        <div class="mb-3 d-flex">
+            <div class="col-3">
+                <label asp-for="DateOfBirth">
+                    <h5>Date of Birth: </h5>
+                </label>
+            </div>
+            <div class="col-9">
+                <input class="w-100 form-control" asp-for="DateOfBirth"/>
+            </div>
+        </div>
+
+        <div class="d-flex mb-3">
+            <div class="col-3">
+                <label asp-for="CountryId">
+                    <h5>Country:</h5>
+                </label>
+            </div>
+            <div class="col-9">
+                <select class="form-select w-100" asp-for="CountryId" asp-items="@ViewBag.Countries">
+                    <option selected disabled="disabled">Select a country</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 d-flex">
+            <div class="col-3">
+                <label asp-for="Address" class="form-label">
+                    <h5>Address:</h5>
+                </label>
+            </div>
+            <div class="col-9">
+                <textarea class="form-control" asp-for="Address" rows="2"></textarea>
+            </div>
+
+        </div>
+        <div class="text-center mt-5">
+            <button type="submit" class="btn btn-success">Submit</button>
+
+        </div>
+        @if (ViewBag.Errors != null)
+        {
+            <div class="d-flex justify-content-center text-danger mt-3">
+                <ul>
+                    @foreach (string error in ViewBag.Errors)
+                    {
+                        <li>@error</li>
+                    }
+                </ul>
+            </div>
+        }
+    </form>
+</div>

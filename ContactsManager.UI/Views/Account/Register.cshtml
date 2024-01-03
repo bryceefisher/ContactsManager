@@ -1,0 +1,112 @@
+@model ContactsManager.Core.DTO.RegisterDto
+
+@{
+    ViewBag.Title = "Register";
+}
+
+
+<div class="container">
+    <div class="text-center mt-5">
+        <h3 class="display-6">Register</h3>
+    </div>
+    <form asp-action="Register" asp-controller="Account" method="post">
+
+        @*PersonName*@
+        <div class="Container d-flex justify-content-between mt-5">
+            <div class="col-1 mt-2 me-1">
+                <label asp-for="PersonName" class="form-label">
+                    <strong>Name:</strong>
+                </label>
+            </div>
+            <div class="col-xl-11 col-sm-9 col-md-10 text-center">
+                <input asp-for="PersonName" class="form-control" placeholder="Name">
+                <span asp-validation-for="PersonName" class="text-danger"></span>
+            </div>
+        </div>
+        @*Email*@
+        <div class="Container d-flex justify-content-between mt-3">
+            <div class="col-1 mt-2 me-1">
+                <label asp-for="Email" class="form-label">
+                    <strong>Email:</strong>
+                </label>
+            </div>
+            <div class="col-xl-11 col-sm-9 col-md-10 text-center">
+                <input asp-for="Email" class="form-control" placeholder="Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        @*Phone*@
+        <div class="Container d-flex justify-content-between mt-3">
+            <div class="col-1 mt-2 me-1">
+                <label asp-for="Phone" class="form-label">
+                    <strong>Phone:</strong>
+                </label>
+            </div>
+            <div class=" col-xl-11 col-sm-9 col-md-10 text-center">
+                <input asp-for="Phone" class="form-control" placeholder="Phone Number">
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+        </div>
+        @*Password*@
+        <div class="Container d-flex justify-content-between mt-3">
+            <div class="col-1 mt-2 me-1">
+                <label asp-for="Password" class="form-label">
+                    <strong>Password:</strong>
+                </label>
+            </div>
+            <div class=" col-xl-11 col-sm-9 col-md-10 text-center">
+                <input asp-for="Password" class="form-control" placeholder="Password">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        @*ConfirmPassword*@
+        <div class="Container d-flex justify-content-between mt-3">
+            <div class="col-1 me-1">
+                <label asp-for="ConfirmPassword" class="form-label">
+                    <strong>Confirm Password:</strong>
+                </label>
+            </div>
+            <div class=" col-xl-11 col-sm-9 col-md-10 mt-2 text-center">
+                <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password">
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="Container d-flex  mt-3">
+            <div class="col-md-2 col-sm-4 mt-3">
+                <label asp-for="UserType" class="form-label">
+                    <strong>User Type:</strong>
+                </label>
+            </div>
+
+            <div class="d-flex row">
+                <div class="form-check mt-3 col-4">
+                    <input class="form-check-input" type="radio" id="User" value="User" asp-for="UserType" checked>
+                    <label class="form-check-label" for="User">
+                        User
+                    </label>
+                </div>
+                <div class="form-check mt-3 mx-3 col-4">
+                    <input class="form-check-input" type="radio" id="Admin" asp-for="UserType" value="Admin">
+                    <label class="form-check-label" for="Admin">
+                        Administrator
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 text-center">
+            <button class="btn btn-success">Register</button>
+        </div>
+    </form>
+    <div class="text-center mt-3">
+        <a class="text-dark">Already Registered?</a><a class="text-dark mx-2 mt-2 text-decoration-underline" asp-controller="Account" asp-action="Login">Login</a>
+    </div>
+    <div class="container text-center mt-2">
+
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(x => x.Errors))
+        {
+            <p class="text-danger">@error.ErrorMessage</p>
+        }
+
+    </div>
+
+</div>

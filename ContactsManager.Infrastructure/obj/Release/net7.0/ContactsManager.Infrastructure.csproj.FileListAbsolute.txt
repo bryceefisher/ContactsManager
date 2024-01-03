@@ -1,0 +1,17 @@
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/bin/Release/net7.0/ContactsManager.Infrastructure.deps.json
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/bin/Release/net7.0/ContactsManager.Infrastructure.runtimeconfig.json
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/bin/Release/net7.0/ContactsManager.Infrastructure.dll
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/bin/Release/net7.0/ContactsManager.Infrastructure.pdb
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/bin/Release/net7.0/ContactsManager.Core.dll
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/bin/Release/net7.0/ContactsManager.Core.pdb
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/ContactsManager.Infrastructure.csproj.AssemblyReference.cache
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/ContactsManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/ContactsManager.Infrastructure.AssemblyInfoInputs.cache
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/ContactsManager.Infrastructure.AssemblyInfo.cs
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/ContactsManager.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/ContactsManager.Infrastructure.csproj.CopyComplete
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/ContactsManager.Infrastructure.dll
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/refint/ContactsManager.Infrastructure.dll
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/ContactsManager.Infrastructure.pdb
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/ContactsManager.Infrastructure.genruntimeconfig.cache
+/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.Infrastructure/obj/Release/net7.0/ref/ContactsManager.Infrastructure.dll

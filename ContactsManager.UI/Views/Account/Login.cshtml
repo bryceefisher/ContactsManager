@@ -1,0 +1,57 @@
+@model ContactsManager.Core.DTO.LoginDTO
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="container ">
+    <div class="text-center mt-5 mb-5">
+        <h3 class="display-6">Login</h3>
+    </div>
+    @* asp-route-ReturnUrl to send user to last used page on login *@
+    <form asp-action="Login" asp-controller="Account" method="post" asp-route-ReturnUrl="@Context.Request.Query["ReturnUrl"]">
+
+        @*Email*@
+        <div class="Container d-flex justify-content-between ">
+            <div class="col-1 me-1 mt-3">
+                <label asp-for="Email" class="form-label">
+                    <strong>Email:</strong>
+                </label>
+            </div>
+            <div class=" col-xl-11 col-sm-9 col-md-10 mt-2 text-center">
+                <input asp-for="Email" class="form-control" placeholder="Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+
+
+        @*Password*@
+        <div class="Container d-flex justify-content-between mt-3">
+            <div class="col-1 me-1 mt-3">
+                <label asp-for="Password" class="form-label">
+                    <strong>Password:</strong>
+                </label>
+            </div>
+            <div class=" col-xl-11 col-sm-9 col-md-10 mt-3 text-center">
+                <input asp-for="Password" class="form-control" placeholder="Password">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+<div class="text-center">
+        <button type="submit" class="btn btn-success mt-5">Login</button>
+</div>
+    </form>
+    <div class="container text-center mt-2">
+
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(x => x.Errors))
+        {
+            <p class="text-danger">@error.ErrorMessage</p>
+        }
+
+    </div>
+    <div class="text-center mt-3">
+        <a class="text-dark">Not Yet Registered?</a><a class="text-dark mx-2 mt-2 text-decoration-underline text-dark" asp-controller="Account" asp-action="Register">Register</a>
+    </div>
+
+
+</div>

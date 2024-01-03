@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/stylesheet.css"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+          integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-dark bg-dark p-2 text-center">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="Person" asp-action="Index">
+            <img src="~/logo.png" width="75px" asp-append-version="true" alt=""/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarNav">
+            <ul class="navbar-nav w-100">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Person" asp-action="Index">Contacts</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" asp-controller="Person" asp-action="Create">Create Contact</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" asp-controller="Country" asp-action="UploadFromExcel">Upload Countries</a>
+                </li>
+                @if (User.IsInRole(UserTypeOptions.Admin.ToString()))
+                {
+                    <li class="nav-item text-white">
+
+                        <a class="text-white nav-link" asp-action="Index" asp-controller="Home" asp-area="Admin">Admin Area</a>
+
+                    </li>
+                }
+            </ul>
+
+            <div class="container text-end text-white" id="userInfo">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div id="userDiv">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div>
+                                <a >Hello, @User.Identity.Name</a> |<a asp-action="Logout" asp-controller="Account" class=" mx-2 mt-2 text-decoration-underline text-white">Logout</a>
+                            </div>
+                        }
+
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+<div class="container">
+    @RenderBody()
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/JavaScript/Site.JS"></script>
+
+</body>
+</html>

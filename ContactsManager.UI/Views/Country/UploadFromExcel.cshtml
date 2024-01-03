@@ -1,0 +1,27 @@
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@{
+    ViewBag.Title = "Upload Excel";
+    Layout = "_Layout";
+}
+
+
+<div class="container text-center mt-3">
+    <h2>Upload Countries from Excel</h2>
+    <form asp-action="UploadFromExcel" asp-controller="Country" method="post" enctype="multipart/form-data">
+
+        @* ExcelFile *@
+        <div class="col mt-5">
+            <div>
+                <label for="excelFile" class="form-label">Choose an Excel File</label>
+            </div>
+            <div>
+                <input type="file" name="file" class="form-control" id="excelFile"/>
+                <div class="text-danger">@ViewBag.ErrorMessage</div>
+                <div class="text-success">@ViewBag.SuccessMessage</div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <button class="btn btn-primary" type="submit">Upload</button>
+        </div>
+    </form>
+</div>

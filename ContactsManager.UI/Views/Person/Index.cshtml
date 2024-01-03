@@ -1,0 +1,99 @@
+@using System.Globalization
+@model IEnumerable<PersonResponse>
+@{
+    ViewBag.Title = "Person";
+    Layout = "_Layout";
+    SortOrderEnum sortOrderEnum = ViewBag.CurrentSortOrder;
+}
+
+<form asp-controller="Person" asp-action="Index" method="get">
+    <h1 class="text-center p-2 display-3">Contacts</h1>
+    <div class="input-group mb-3 mt-3 mx-3 justify-content-center">
+        <div class="col-2 col-sm-3">
+            <select class="form-select bg-secondary bg-opacity-25 rounded rounded-pill" id="inputGroupSelect01" name="searchBy">
+                <option selected disabled="disabled">Choose...</option>
+                @foreach (KeyValuePair<string, string> field in ViewBag.SearchFields)
+                {
+                    if (field.Key == ViewBag.CurrentSearchBy)
+                    {
+                        <option selected value="@field.Key">@field.Value</option>
+                    }
+                    else
+                    {
+                        <option value="@field.Key">@field.Value</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="col-6">
+            <input type="search" id="search" class="form-control rounded rounded-pill" placeholder="Name" aria-label="Recipient's username" aria-describedby="button-addon2" name="searchString" value="@ViewBag.CurrentSearchString">
+        </div>
+    </div>
+
+
+    <div class="d-flex text-center  pb-3 justify-content-center col">
+
+        <button class="btn btn-outline-secondary mx-2 bg-secondary bg-opacity-25" type="submit" id="button-addon2">Search</button>
+
+        <button type="button" class="btn btn-danger">
+            <a asp-controller="Person" asp-action="Index">Clear</a>
+        </button>
+    </div>
+
+</form>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">
+                    <a class="text-decoration-underline" asp-controller="Person" asp-action="index" asp-route-searchBy="@ViewBag.CurrentSearchBy" asp-route-searchString="@ViewBag.CurrentSearchString" asp-route-sortBy="PersonName" asp-route-sortOrder="@((sortOrderEnum == SortOrderEnum.ASC && ViewBag.CurrentSortBy == "PersonName") ? SortOrderEnum.DESC : SortOrderEnum.ASC)">Name</a>
+                </th>
+
+                <th scope="col">
+                    <a class="text-decoration-underline" asp-controller="Person" asp-action="index" asp-route-searchBy="@ViewBag.CurrentSearchBy" asp-route-searchString="@ViewBag.CurrentSearchString" asp-route-sortBy="Email" asp-route-sortOrder="@((sortOrderEnum == SortOrderEnum.ASC && ViewBag.CurrentSortBy == "Email") ? SortOrderEnum.DESC : SortOrderEnum.ASC)">Email</a>
+                </th>
+
+                <th scope="col">
+                    <a class="text-decoration-underline" asp-controller="Person" asp-action="index" asp-route-searchBy="@ViewBag.CurrentSearchBy" asp-route-searchString="@ViewBag.CurrentSearchString" asp-route-sortBy="Phone" asp-route-sortOrder="@((sortOrderEnum == SortOrderEnum.ASC && ViewBag.CurrentSortBy == "Phone") ? SortOrderEnum.DESC : SortOrderEnum.ASC)">Phone</a>
+                </th>
+                <th scope="col">
+                    <a class="text-decoration-underline" asp-controller="Person" asp-action="index" asp-route-searchBy="@ViewBag.CurrentSearchBy" asp-route-searchString="@ViewBag.CurrentSearchString" asp-route-sortBy="DateOfBirth" asp-route-sortOrder="@((sortOrderEnum == SortOrderEnum.ASC && ViewBag.CurrentSortBy == "DateOfBirth") ? SortOrderEnum.DESC : SortOrderEnum.ASC)">Date of Birth</a>
+                </th>
+                <th scope="col">
+                    <a class="text-decoration-underline" asp-controller="Person" asp-action="index" asp-route-searchBy="@ViewBag.CurrentSearchBy" asp-route-searchString="@ViewBag.CurrentSearchString" asp-route-sortBy="Country" asp-route-sortOrder="@((sortOrderEnum == SortOrderEnum.ASC && ViewBag.CurrentSortBy == "Country") ? SortOrderEnum.DESC : SortOrderEnum.ASC)">Country</a>
+                </th>
+                <th scope="col">
+                    <a class="text-decoration-underline" asp-controller="Person" asp-action="index" asp-route-searchBy="@ViewBag.CurrentSearchBy" asp-route-searchString="@ViewBag.CurrentSearchString" asp-route-sortBy="Address" asp-route-sortOrder="@((sortOrderEnum == SortOrderEnum.ASC && ViewBag.CurrentSortBy == "Address") ? SortOrderEnum.DESC : SortOrderEnum.ASC)">Address</a>
+                </th>
+
+                <th scope="col">Options</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            @foreach (PersonResponse person in Model)
+            {
+                <tr>
+                    <td>@person.PersonName</td>
+                    <td>@person.Email</td>
+                    <td>@person.Phone</td>
+                    <td>@person.DateOfBirth.ToString().Substring(0, person.DateOfBirth.ToString().IndexOf(" "))</td>
+                    <td>@person.Country</td>
+                    <td>@person.Address</td>
+                    <td><a asp-controller="Person" asp-action="Edit" asp-route-personId="@person.PersonId" class="text-black text-decoration-underline fst-italic">Edit</a>/<a class="text-black text-decoration-underline fst-italic" asp-controller="Person" asp-action="Delete" asp-route-personId="@person.PersonId">Delete</a></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+    <div class="container-fluid text-center mt-3">
+        <a class="text-dark text-decoration-underline" asp-controller="Person" asp-action="PeoplePDF">Download PDF</a> /
+
+
+        <a class="text-dark text-decoration-underline" asp-controller="Person" asp-action="PeopleCSV">Download CSV</a> /
+
+
+        <a class="text-dark text-decoration-underline" asp-controller="Person" asp-action="PeopleExcel">Download Excel</a>
+    </div>
+</div>

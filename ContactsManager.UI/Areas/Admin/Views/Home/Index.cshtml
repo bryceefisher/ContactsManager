@@ -1,0 +1,67 @@
+@using ContactsManager.Core.Domain.Entities.IdentityEntities
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IQueryable<ContactsManager.Core.Domain.Entities.IdentityEntities.ApplicationUser>
+@{
+    ViewBag.Title = "Admin";
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/stylesheet.css"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+          integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="text-center mt-5">
+    <h3 class="display-5">
+        Admin Area
+    </h3>
+    <h3>
+        View Registered Users
+    </h3>
+</div>
+@*asp-area empty for normal for non-area controller*@
+<a asp-action="Index" asp-controller="Person" asp-area="">People</a>
+
+
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Access Failed Count</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.PersonName</td>
+                    <td>@user.Email.Substring(0, 4)**************</td>
+                    <td>@user.PhoneNumber.Substring(0, 3)*********</td>
+                    <td>@user.AccessFailedCount</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+    <div class="container text-center">
+        <a class="text-secondary text-decoration-underline" asp-area="" asp-controller="Person" asp-action="Index">Contact List</a>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/JavaScript/Site.JS"></script>
+</body>

@@ -1,0 +1,60 @@
+@using System.Net
+@model IEnumerable<PersonResponse>
+@{
+    Layout = null;
+
+}
+
+<link rel="stylesheet" href="~/css/stylesheet.css"/>
+<link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css"/>
+<link rel="stylesheet" href="@("http://" + Context.Request.Host.ToString() + "~/lib/bootstrap/css/bootstrap.css")"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+      integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<table class="table table-striped">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">
+            Name
+        </th>
+
+        <th scope="col">
+            Email
+        </th>
+        <th scope="col">
+            Date of Birth
+        </th>
+        <th scope="col">
+            Gender
+        </th>
+        <th scope="col">
+            Country
+        </th>
+        <th scope="col">
+            Address
+        </th>
+        <th scope="col">
+            Receive News Letters
+        </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    @foreach (PersonResponse person in Model)
+    {
+        <tr>
+            <td>@person.PersonName</td>
+            <td>@person.Email</td>
+            <td>@person.DateOfBirth?.ToString().Substring(0, person.DateOfBirth.ToString().IndexOf(" "))</td>
+            <td>@person.Gender</td>
+            <td>@person.Country</td>
+            <td>@person.Address</td>
+            <td>@person.ReceiveNewsLetters</td>
+
+        </tr>
+    }
+    </tbody>
+</table>
+<script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
