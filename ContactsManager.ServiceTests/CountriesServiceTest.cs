@@ -1,13 +1,10 @@
 using ContactsManager.Core.Domain.Entities;
+using ContactsManager.Core.DTO;
 using ContactsManager.Core.ServiceContracts;
 using ContactsManager.Core.Services;
 using ContactsManager.Infrastructure.DbContext;
 using EntityFrameworkCoreMock;
 using Microsoft.EntityFrameworkCore;
-using ServiceContracts;
-using ServiceContracts.DTO;
-using Services;
-
 namespace ContactsManager.ServiceTests;
 
 public class CountriesServiceTest

@@ -1,19 +1,23 @@
 using System.Reflection;
 using ContactsManager.Core.Domain.Entities.IdentityEntities;
+using ContactsManager.Core.Domain.RepositoryContracts;
 using ContactsManager.Core.ServiceContracts;
 using ContactsManager.Core.Services;
 using ContactsManager.Infrastructure.DbContext;
+using ContactsManager.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using Repositories;
-using RepositoryContracts;
-using ServiceContracts;
-using Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRouting(options =>
+{
+    options.LowercaseUrls = true;
+    options.AppendTrailingSlash = true;
+});
 
 builder.Services.AddScoped<ICountriesService, CountriesService>();
 builder.Services.AddScoped<IPersonService, PersonService>();
@@ -61,7 +65,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     // Set the path for the login page
     // This is used when an unauthenticated user tries to access a restricted resource
-    options.LoginPath = "/Account/Login";
+    options.LoginPath = "/account/login";
 });
 
 

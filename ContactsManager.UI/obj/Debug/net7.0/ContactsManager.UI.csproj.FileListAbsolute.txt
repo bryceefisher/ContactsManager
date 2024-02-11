@@ -1096,3 +1096,4 @@
 /Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/obj/Debug/net7.0/ContactsManager.UI.pdb
 /Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/obj/Debug/net7.0/ContactsManager.UI.genruntimeconfig.cache
 /Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/obj/Debug/net7.0/ref/ContactsManager.UI.dll
+/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/bin/Debug/net7.0/appsettings.Production.json

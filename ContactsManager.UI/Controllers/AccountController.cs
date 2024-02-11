@@ -1,9 +1,9 @@
 using ContactsManager.Core.Domain.Entities.IdentityEntities;
 using ContactsManager.Core.DTO;
+using ContactsManager.Core.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using ServiceContracts.Enums;
 
 namespace ContactsManager.UI.Controllers;
 
@@ -29,6 +29,7 @@ public class AccountController : Controller
     public IActionResult Register()
     {
         return View(); // Return the registration view
+        
     }
 
     // POST action for processing the registration form

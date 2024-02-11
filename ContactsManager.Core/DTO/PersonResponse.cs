@@ -1,8 +1,6 @@
-using System.Reflection.Metadata;
 using ContactsManager.Core.Domain.Entities;
-using ServiceContracts.Enums;
 
-namespace ServiceContracts.DTO;
+namespace ContactsManager.Core.DTO;
 
 
 

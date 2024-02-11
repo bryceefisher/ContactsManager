@@ -1,10 +1,10 @@
-using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using ContactsManager.Core.Domain.Entities;
+using ContactsManager.Core.Domain.RepositoryContracts;
 using ContactsManager.Infrastructure.DbContext;
-using RepositoryContracts;
+using Microsoft.EntityFrameworkCore;
 
-namespace Repositories;
+namespace ContactsManager.Infrastructure.Repositories;
 
 public class PersonsRepository : IPersonRepository
 {

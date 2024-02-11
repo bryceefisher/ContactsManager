@@ -9,61 +9,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ContactsManager.UI
 build_property.RootNamespace = ContactsManager.UI
-build_property.ProjectDir = /Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/
+build_property.ProjectDir = /Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = /Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI
+build_property.MSBuildProjectDirectory = /Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Areas/Admin/Views/Home/Index.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Areas/Admin/Views/_ViewImports.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/Account/Login.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/Account/Register.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/Country/UploadFromExcel.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/Country/UploadFromExcel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9VcGxvYWRGcm9tRXhjZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/Person/Create.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/Person/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/Person/Delete.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/Person/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/Person/Edit.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/Person/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/Person/Index.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/Person/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/Person/PeoplePDF.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/Person/PeoplePDF.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uL1Blb3BsZVBERi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/Shared/_Layout.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/_ViewImports.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bryce/RiderProjects/aspcourse/ContactsManager.UI/ContactsManager.UI/Views/_ViewStart.cshtml]
+[/Users/bryce/RiderProjects/aspcourse/ContactsManager/ContactsManager.UI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

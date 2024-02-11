@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using ContactsManager.Core.Enums;
 using Microsoft.AspNetCore.Mvc;
-using ServiceContracts.Enums;
 
 
 namespace ContactsManager.Core.DTO;

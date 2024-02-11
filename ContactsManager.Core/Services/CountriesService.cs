@@ -1,9 +1,9 @@
 ﻿using ContactsManager.Core.Domain.Entities;
+using ContactsManager.Core.Domain.RepositoryContracts;
+using ContactsManager.Core.DTO;
 using ContactsManager.Core.ServiceContracts;
 using Microsoft.AspNetCore.Http;
 using OfficeOpenXml;
-using RepositoryContracts;
-using ServiceContracts.DTO;
 
 namespace ContactsManager.Core.Services;
 

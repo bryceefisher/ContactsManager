@@ -1,5 +1,8 @@
 using AutoFixture;
 using ContactsManager.Core.Domain.Entities;
+using ContactsManager.Core.Domain.RepositoryContracts;
+using ContactsManager.Core.DTO;
+using ContactsManager.Core.Enums;
 using ContactsManager.Core.ServiceContracts;
 using ContactsManager.Core.Services;
 using ContactsManager.Infrastructure.DbContext;
@@ -7,11 +10,6 @@ using EntityFrameworkCoreMock;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using Moq;
-using RepositoryContracts;
-using ServiceContracts;
-using ServiceContracts.DTO;
-using ServiceContracts.Enums;
-using Services;
 using Xunit.Abstractions;
 
 namespace ContactsManager.ServiceTests;
@@ -98,10 +96,8 @@ public class PersonServiceTest
             PersonName = "John Doe",
             Email = "johndoe@example.com",
             DateOfBirth = new DateTime(1990, 5, 15),
-            Gender = GenderOptions.Male,
             CountryId = response[0].CountryID,
             Address = "123 Main Street, City",
-            ReceiveNewsLetters = true
         };
 
 
@@ -111,10 +107,8 @@ public class PersonServiceTest
             PersonName = "Jane Smith",
             Email = "janesmith@example.com",
             DateOfBirth = new DateTime(1985, 8, 25),
-            Gender = GenderOptions.Female,
             CountryId = response[1].CountryID,
             Address = "456 Elm Street, Town",
-            ReceiveNewsLetters = false
         };
 
         PersonAddRequest person3 = new PersonAddRequest()
@@ -123,10 +117,9 @@ public class PersonServiceTest
             PersonName = "Bob Johnson",
             Email = "bobjohnson@example.com",
             DateOfBirth = new DateTime(1975, 3, 10),
-            Gender = GenderOptions.Male,
             CountryId = response[2].CountryID,
             Address = "789 Oak Street, Village",
-            ReceiveNewsLetters = true
+          
         };
 
         PersonResponse response1 = await _personService.AddPerson(person1);
@@ -284,7 +277,7 @@ public class PersonServiceTest
         int? nullId = null;
 
         // Assert.Null(await _personService.GetPersonByPersonId(nullId)!);
-        var nullPerson = await _personService.GetPersonByPersonId(nullId)!;
+        var nullPerson = await _personService.GetPersonByPersonId(nullId )!;
 
         nullPerson.Should().BeNull();
     }

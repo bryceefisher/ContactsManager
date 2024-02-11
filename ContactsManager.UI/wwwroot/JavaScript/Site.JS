@@ -1,36 +1,49 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    const userInfoDiv = document.getElementById('userInfo');
-    const userDiv = document.getElementById('userDiv');
+class UserInfoLayout {
+    constructor() {
+        this.userInfoDiv = document.getElementById('userInfo');
+        this.userDiv = document.getElementById('userDiv');
+        this.hrElement = null;
 
-    const checkAndInsertHr = () => {
-        // Check if the hr already exists
-        let hrElement = document.getElementById('hrUserInfo');
+        // Attach resize event listener
+        window.addEventListener('resize', this.checkAndInsertHr.bind(this));
 
+        // Call the function initially to set up the correct state
+        this.checkAndInsertHr();
+    }
+
+    checkAndInsertHr() {
         if (window.innerWidth < 991) {
-            userInfoDiv.classList.remove('mx-5');
-            userDiv.classList.add('text-center');
-            if (!hrElement) {
-                // If the hr doesn't exist and screen is less than 1200px, create and insert it
-                hrElement = document.createElement('hr');
-                hrElement.id = 'hrUserInfo';
-                // Insert the hr element after the userInfo div
-                userInfoDiv.insertAdjacentElement('afterbegin', hrElement);
-            }
+            this.applySmallScreenLayout();
         } else {
-            userInfoDiv.classList.add('mx-5');
-            userDiv.classList.remove('text-center');
-            // If screen is not less than 1200px and hr exists, remove it
-            if (hrElement) {
-                hrElement.remove();
-                
-            }
+            this.applyLargeScreenLayout();
         }
-    };
+    }
 
-    // Attach the function to the resize event listener
-    window.addEventListener('resize', checkAndInsertHr);
+    applySmallScreenLayout() {
+        this.userInfoDiv.classList.remove('mx-5');
+        this.userDiv.classList.add('text-center');
 
-    // Call the function initially to set up the correct state
-    checkAndInsertHr();
+        if (!this.hrElement) {
+            this.hrElement = document.createElement('hr');
+            this.hrElement.id = 'hrUserInfo';
+            this.userInfoDiv.insertAdjacentElement('afterbegin', this.hrElement);
+        }
+    }
+
+    applyLargeScreenLayout() {
+        this.userInfoDiv.classList.add('mx-5');
+        this.userDiv.classList.remove('text-center');
+
+        if (this.hrElement) {
+            this.hrElement.remove();
+            this.hrElement = null;
+        }
+    }
+}
+
+// Usage
+document.addEventListener('DOMContentLoaded', () => {
+    if (!location.href.includes('admin') && !location.href.includes('login')){
+        new UserInfoLayout();
+    }
 });

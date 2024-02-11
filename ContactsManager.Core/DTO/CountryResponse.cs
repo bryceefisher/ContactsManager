@@ -1,6 +1,6 @@
 using ContactsManager.Core.Domain.Entities;
 
-namespace ServiceContracts.DTO;
+namespace ContactsManager.Core.DTO;
 
 /// <summary>
 /// DTO class that is used as a return type for most of CountriesService methods

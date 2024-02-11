@@ -1,4 +1,4 @@
-@model PersonAddRequest
+@model ContactsManager.Core.DTO.PersonAddRequest
 @{
     ViewBag.Title = "Create";
 }
@@ -19,6 +19,7 @@
             </div>
             <div class="col-9">
                 <input class="w-100 form-control" asp-for="PersonName" required>
+                <span class="text-danger" asp-validation-for="PersonName"></span>
             </div>
         </div>
         <div class="mb-3 d-flex">
@@ -29,6 +30,7 @@
             </div>
             <div class="col-9">
                 <input class="w-100 form-control" asp-for="Email" required>
+                <span class="text-danger" asp-validation-for="Email"></span>
             </div>
         </div>
         <div class="mb-3 d-flex">
@@ -39,6 +41,7 @@
             </div>
             <div class="col-9">
                 <input class="w-100 form-control" asp-for="Phone" required>
+                <span class="text-danger" asp-validation-for="Phone"></span>
             </div>
         </div>
         <div class="mb-3 d-flex">
@@ -49,6 +52,7 @@
             </div>
             <div class="col-9">
                 <input class="w-100 form-control" asp-for="DateOfBirth"/>
+                <span class="text-danger" asp-validation-for="DateOfBirth"></span>
             </div>
         </div>
 
@@ -62,6 +66,7 @@
                 <select class="form-select w-100" asp-for="CountryId" asp-items="@ViewBag.Countries">
                     <option selected disabled="disabled">Select a country</option>
                 </select>
+                <span class="text-danger" asp-validation-for="CountryId"></span>
             </div>
         </div>
         <div class="mb-3 d-flex">
@@ -72,6 +77,7 @@
             </div>
             <div class="col-9">
                 <textarea class="form-control" asp-for="Address" rows="2"></textarea>
+                <span class="text-danger" asp-validation-for="Address"></span>
             </div>
 
         </div>

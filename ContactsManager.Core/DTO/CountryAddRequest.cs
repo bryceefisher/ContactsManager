@@ -1,6 +1,6 @@
 using ContactsManager.Core.Domain.Entities;
 
-namespace ServiceContracts.DTO;
+namespace ContactsManager.Core.DTO;
 
 public class CountryAddRequest
 {

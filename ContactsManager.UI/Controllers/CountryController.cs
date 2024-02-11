@@ -1,8 +1,7 @@
 using ContactsManager.Core.ServiceContracts;
 using Microsoft.AspNetCore.Mvc;
-using ServiceContracts;
 
-namespace CRUDExample.Controllers;
+namespace ContactsManager.UI.Controllers;
 
 [Route("[Controller]/[action]")]
 public class CountryController : Controller

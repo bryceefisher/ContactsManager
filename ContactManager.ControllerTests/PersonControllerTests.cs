@@ -1,4 +1,4 @@
-namespace CRUDTests;
+namespace ContactManager.ControllerTests;
 
 public class PersonControllerTests
 {

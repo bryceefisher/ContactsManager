@@ -1,9 +1,7 @@
-using ServiceContracts.Enums;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.InteropServices.JavaScript;
 using ContactsManager.Core.Domain.Entities;
 
-namespace ServiceContracts.DTO;
+namespace ContactsManager.Core.DTO;
 
 /// <summary>
 /// Acts as a DTO for inserting a new Person

@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using ContactsManager.Core.Domain.Entities;
 
-namespace RepositoryContracts;
+namespace ContactsManager.Core.Domain.RepositoryContracts;
 
 /// <summary>
 /// Represents data access logic for Person table.

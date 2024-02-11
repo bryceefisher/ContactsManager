@@ -1,4 +1,4 @@
-namespace ServiceContracts.Enums;
+namespace ContactsManager.Core.Enums;
 
 public enum UserTypeOptions
 {

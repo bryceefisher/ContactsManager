@@ -1,12 +1,12 @@
 using ContactsManager.Core.Domain.Entities.IdentityEntities;
+using ContactsManager.Core.DTO;
+using ContactsManager.Core.Enums;
 using ContactsManager.Core.ServiceContracts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Rotativa.AspNetCore;
 using Rotativa.AspNetCore.Options;
-using ServiceContracts.DTO;
-using ServiceContracts.Enums;
 
 namespace ContactsManager.UI.Controllers;
 

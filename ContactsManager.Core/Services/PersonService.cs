@@ -2,14 +2,14 @@ using System.Globalization;
 using System.Reflection;
 using System.Text;
 using ContactsManager.Core.Domain.Entities;
+using ContactsManager.Core.Domain.RepositoryContracts;
+using ContactsManager.Core.DTO;
+using ContactsManager.Core.Enums;
+using ContactsManager.Core.Helpers;
 using ContactsManager.Core.ServiceContracts;
 using CsvHelper;
 using Microsoft.AspNetCore.Http;
 using OfficeOpenXml;
-using RepositoryContracts;
-using ServiceContracts.DTO;
-using ServiceContracts.Enums;
-using Services.Helpers;
 
 namespace ContactsManager.Core.Services;
 
